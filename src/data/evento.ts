@@ -33,7 +33,7 @@ export const programacao: ItemProgramacao[] = [
 ];
 
 export const atracoes: Atracao[] = [
-  { id: 'a1', titulo: 'Música que aproxima', subtitulo: 'Artistas locais e sons de muitos estilos.', categoria: 'MÚSICA', imagem: '/imagens/musica.svg', alt: 'Ilustração de violão e notas musicais em tons terrosos' },
-  { id: 'a2', titulo: 'Arte em movimento', subtitulo: 'Dança, expressões e oficinas criativas.', categoria: 'ARTE & DANÇA', imagem: '/imagens/arte.svg', alt: 'Ilustração abstrata colorida de dança e formas artísticas' },
-  { id: 'a3', titulo: 'Sabores e encontros', subtitulo: 'Uma celebração da nossa gastronomia.', categoria: 'GASTRONOMIA', imagem: '/imagens/sabores.svg', alt: 'Ilustração colorida de alimentos, prato e flores' },
+  { id: 'a1', titulo: 'Música que aproxima', subtitulo: 'Artistas locais e sons de muitos estilos.', categoria: 'MÚSICA', imagem: `${import.meta.env.BASE_URL}imagens/musica.svg`, alt: 'Ilustração de violão e notas musicais em tons terrosos' },
+  { id: 'a2', titulo: 'Arte em movimento', subtitulo: 'Dança, expressões e oficinas criativas.', categoria: 'ARTE & DANÇA', imagem: `${import.meta.env.BASE_URL}imagens/arte.svg`, alt: 'Ilustração abstrata colorida de dança e formas artísticas' },
+  { id: 'a3', titulo: 'Sabores e encontros', subtitulo: 'Uma celebração da nossa gastronomia.', categoria: 'GASTRONOMIA', imagem: `${import.meta.env.BASE_URL}imagens/sabores.svg`, alt: 'Ilustração colorida de alimentos, prato e flores' },
 ];
