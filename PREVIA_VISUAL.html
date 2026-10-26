@@ -1,0 +1,292 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prévia visual — Festival Viva Cultura</title><style>
+
+
+
+:root { font-family: 'Segoe UI', 'Trebuchet MS', Arial, sans-serif; color: #193a33; background: #faf8f2; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body { margin: 0; min-width: 320px; }
+button, input, textarea { font: inherit; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 3px solid #ef9b51; outline-offset: 4px; }
+::selection { color: #163c35; background: #f3cb83; }
+.container { width: min(1210px, calc(100% - 64px)); margin-inline: auto; }
+.skip-link { position: fixed; left: 18px; top: -100px; z-index: 1000; background: #f4cc87; padding: 12px 18px; font-weight: 800; color: #143e34; border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+.botao { display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 15px 23px; border: 0; border-radius: 6px; font-size: 13px; line-height: 1.3; font-weight: 800; transition: transform .2s, background .2s, color .2s; }
+.botao:hover { transform: translateY(-2px); }
+.botao-amarelo { background: #f2ca80; color: #153b33; }
+.botao-amarelo:hover { background: #f8dda6; }
+.botao-escuro { background: #16493f; color: #fff; }
+.botao-escuro:hover { background: #236959; }
+.site-header { position: relative; z-index: 30; background: #fcfaf4; }
+.topbar { display: flex; justify-content: space-between; padding: 9px max(32px, calc((100vw - 1210px)/2)); gap: 16px; background: #10392f; color: #e4e9da; font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.nav-container { display: flex; align-items: center; min-height: 88px; gap: 34px; }
+.marca { display: inline-flex; align-items: center; gap: 9px; flex-shrink: 0; }
+.marca-simbolo { display: grid; place-items: center; background: #153e35; border-radius: 6px; width: 42px; height: 42px; color: #f4cb80; font-size: 31px; font-weight: 900; letter-spacing: -.14em; padding-right: 5px; }
+.marca-ponto { color: #e98c6e; }
+.marca-nome { color: #143f35; font-size: 24px; line-height: .82; font-weight: 900; letter-spacing: -.075em; }
+.marca-nome > span { color: #d2785a; }
+.marca-nome small { display: block; padding-top: 9px; font-size: 9px; letter-spacing: .3em; font-weight: 900; }
+.nav-desktop { display: flex; justify-content: center; gap: clamp(11px, 1.55vw, 26px); align-items: center; flex: 1; }
+.nav-desktop a { color: #344f48; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.nav-desktop a:hover { color: #c06e50; }
+.botao-nav { background: #153f36; color: #fff; font-size: 12px; padding: 14px 18px; white-space: nowrap; }
+.menu-toggle { display: none; border: 1px solid #e6e0d5; background: #fff; border-radius: 8px; width: 44px; height: 44px; align-items: center; justify-content: center; }
+.nav-mobile { display: none; }
+/* Hero */
+.hero { background: #123e35; color: #fff; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 51% 49%; min-height: 570px; align-items: stretch; }
+.hero-conteudo { padding: 92px 0 54px; display: flex; align-items: flex-start; flex-direction: column; position: relative; z-index: 1; }
+.hero-eyebrow { display: flex; align-items: center; gap: 13px; color: #f2d6a0; font-size: 12px; letter-spacing: .18em; font-weight: 800; margin-bottom: 26px; }
+.eyebrow-traco { width: 26px; height: 2px; background: #f2ca80; }
+.hero h1 { font-size: clamp(57px, 5.35vw, 81px); letter-spacing: -.067em; line-height: 1.055; font-weight: 800; margin: 0; }
+.hero h1 em { color: #f0c781; font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -.045em; }
+.hero h1 > span { position: relative; }
+.asterisco { color: #f0c781; font-size: .38em; position: absolute; transform: translate(6px, 4px); }
+.hero-conteudo > p { max-width: 455px; color: #d3e2da; font-size: 17px; line-height: 1.7; margin: 24px 0 29px; }
+.hero-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; }
+.hero-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; border-bottom: 1px solid #89a59a; padding-bottom: 5px; }
+.hero-link:hover { color: #f2ca80; }
+.hero-rodape { margin-top: auto; padding-top: 42px; display: flex; align-items: center; gap: 9px; font-size: 10px; font-weight: 800; letter-spacing: .18em; color: #d4dfd7; }
+.mini-estrela { color: #f3cc86; font-size: 22px; }
+.hero-arte { position: relative; min-width: 0; display: flex; align-items: center; justify-content: flex-end; }
+.hero-arte > img { width: min(620px, 110%); max-width: none; height: auto; transform: translate(30px, 0); filter: drop-shadow(0 25px 55px rgba(0,0,0,.16)); }
+.hero-arte-etiqueta { position: absolute; bottom: 39px; right: 0; background: #f3c982; color: #153e34; width: 158px; height: 102px; border-radius: 50%; transform: rotate(-9deg); display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; gap: 1px; box-shadow: 0 12px 45px #08251f45; }
+.hero-arte-etiqueta strong { font-size: 12px; line-height: 1.1; max-width: 100px; }
+.hero-arte-etiqueta span { font-size: 10px; font-weight: 800; letter-spacing: .15em; }
+.hero-faixa { border-top: 1px solid #4e766a; background: #0f362e; }
+.hero-faixa-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.hero-faixa-grid > div { display: flex; gap: 15px; align-items: center; min-height: 104px; padding: 20px 23px; border-right: 1px solid #4a6d62; }
+.hero-faixa-grid > div:first-child { padding-left: 0; }
+.hero-faixa-grid > div:last-child { border: 0; }
+.hero-faixa-grid svg { color: #f4c982; flex-shrink: 0; }
+.hero-faixa-grid strong { display: block; font-size: 15px; line-height: 1.3; }
+.hero-faixa-grid small { display: block; font-size: 9px; font-weight: 800; color: #b5cabf; letter-spacing: .12em; margin-top: 7px; }
+/* Sections */
+.section { padding: 102px 0; }
+.section-kicker { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 900; letter-spacing: .17em; color: #336a58; margin-bottom: 22px; }
+.kicker-dot { width: 8px; height: 8px; background: #d78264; border-radius: 50%; flex: 0 0 auto; }
+.titulo-secao { font-size: clamp(39px, 4.15vw, 62px); line-height: 1.09; letter-spacing: -.064em; font-weight: 800; margin: 0; }
+.titulo-secao em { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; color: #cd7858; letter-spacing: -.055em; }
+.texto-muted { color: #64756d; line-height: 1.8; font-size: 15px; }
+.section-topo { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 42px; }
+.section-intro { max-width: 340px; margin: 0 5px 6px 0; }
+/* Sobre */
+.sobre { background: #faf8f2; }
+.sobre-grid { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 110px; }
+.sobre-texto { max-width: 450px; margin: 23px 0; }
+.link-destaque { display: inline-flex; gap: 12px; align-items: center; border-bottom: 2px solid #d18b67; padding-bottom: 7px; font-size: 14px; font-weight: 800; }
+.link-destaque:hover { color: #ae5c43; }
+.sobre-cartao-grande { display: flex; flex-direction: column; position: relative; overflow: hidden; background: #e9eee5; border-radius: 10px; padding: 24px 32px 25px; height: 220px; }
+.sobre-cartao-grande p { position: relative; z-index: 1; max-width: 360px; font-size: 35px; font-weight: 800; line-height: 1.13; letter-spacing: -.05em; margin: auto 0; }
+.sobre-cartao-grande em { font-family: Georgia, serif; font-weight: 400; color: #ba7656; }
+.sobre-asterisco { position: absolute; font-size: 275px; top: -85px; right: -15px; color: #d4dfd3; line-height: 1; }
+.sobre-assinatura { position: relative; font-size: 10px; letter-spacing: .12em; font-weight: 900; }
+.sobre-beneficios { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin-top: 14px; }
+.sobre-beneficios > div { min-height: 124px; display: flex; align-items: flex-start; flex-direction: column; gap: 4px; padding: 17px; border: 1px solid #e7e7dc; border-radius: 9px; background: #fffefa; }
+.sobre-beneficios svg { color: #bd7954; margin-bottom: 5px; }
+.sobre-beneficios strong { font-size: 14px; }
+.sobre-beneficios span { color: #6a7771; font-size: 12px; }
+/* Programação */
+.programacao { background: #f2f0e7; }
+.agenda-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 21px; }
+.abas-dias { display: flex; border: 1px solid #d7dbd0; background: #e8e9e0; border-radius: 7px; padding: 5px; gap: 5px; }
+.aba { display: flex; flex-direction: column; gap: 4px; border: 0; border-radius: 5px; background: transparent; color: #456456; padding: 11px 25px; text-align: left; min-width: 150px; }
+.aba strong { font-size: 14px; }
+.aba span { font-size: 12px; }
+.aba.ativa { background: #18483e; color: #fff; box-shadow: 0 3px 9px #153a3120; }
+.agenda-observacao { display: flex; gap: 7px; align-items: center; color: #586b61; font-size: 12px; }
+.agenda-lista { border-top: 1px solid #d4dbd0; }
+.agenda-item { display: grid; grid-template-columns: 145px minmax(0,1fr) 46px; gap: 20px; align-items: center; padding: 28px 16px 28px 4px; border-bottom: 1px solid #d4dbd0; }
+.agenda-horario { color: #18463c; font-size: 38px; line-height: 1; font-weight: 800; letter-spacing: -.06em; }
+.agenda-horario span { color: #708077; letter-spacing: .1em; font-size: 10px; margin-left: 7px; vertical-align: middle; }
+.agenda-info h3 { margin: 10px 0 6px; font-size: 21px; letter-spacing: -.03em; }
+.agenda-info p { margin: 0; color: #65776e; font-size: 13px; line-height: 1.55; }
+.categoria-chip { color: #845439; font-size: 10px; font-weight: 900; letter-spacing: .12em; }
+.agenda-local { display: flex; align-items: center; gap: 5px; color: #516a5e; font-size: 12px; margin-top: 12px; }
+.agenda-decor { display: grid; place-items: center; background: #e2e7da; border: 1px solid #ced7c9; border-radius: 50%; width: 43px; height: 43px; }
+.agenda-nota { font-size: 12px; line-height: 1.6; color: #62756a; margin: 20px 0 0; }
+/* Atracoes */
+.atracoes { background: #fcfaf4; }
+.atracoes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.atracao-card { background: #fff; border: 1px solid #eee8db; border-radius: 9px; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+.atracao-card:hover { transform: translateY(-5px); box-shadow: 0 18px 35px #26483a12; }
+.atracao-foto { aspect-ratio: 1.25; position: relative; overflow: hidden; background: #d2d9cc; }
+.atracao-foto img { width: 100%; height: 100%; object-fit: cover; }
+.atracao-foto-1 { background: #e8c6a9; }
+.atracao-foto-2 { background: #f0d7af; }
+.atracao-numero { position: absolute; top: 16px; left: 16px; background: #fffef7ed; font-size: 10px; font-weight: 900; letter-spacing: .12em; border-radius: 3px; padding: 9px; }
+.atracao-detalhes { padding: 24px; position: relative; min-height: 167px; }
+.atracao-categoria { color: #b66c4b; font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.atracao-detalhes h3 { letter-spacing: -.038em; font-size: 23px; margin: 10px 0 8px; padding-right: 12px; }
+.atracao-detalhes p { color: #64736b; margin: 0; font-size: 13px; line-height: 1.6; padding-right: 20px; }
+.atracao-seta { position: absolute; right: 18px; bottom: 19px; border: 1px solid #dfe5d9; display: grid; place-items: center; border-radius: 50%; width: 37px; height: 37px; background: #f9faf5; }
+.atracao-seta:hover { background: #f2ca80; }
+/* Location */
+.localizacao { background: #133d34; color: #fff; }
+.local-grid { display: grid; grid-template-columns: .87fr 1.13fr; gap: 75px; align-items: center; }
+.kicker-claro { color: #f0cc8e; }
+.titulo-claro { color: #fff; }
+.titulo-claro em { color: #f2ca80; }
+.local-info > p { color: #d0dfd6; font-size: 15px; line-height: 1.75; margin: 24px 0 30px; max-width: 440px; }
+.endereco-bloco { display: flex; gap: 17px; align-items: flex-start; margin-bottom: 29px; }
+.endereco-bloco > svg { color: #f2ca80; flex-shrink: 0; margin-top: 3px; }
+.endereco-bloco strong { font-size: 19px; display: block; }
+.endereco-bloco span { display: block; margin-top: 5px; color: #e1e9e0; font-size: 14px; }
+.endereco-bloco small { display: block; margin-top: 7px; color: #bfd3c8; font-size: 12px; }
+.local-beneficios { display: grid; gap: 13px; margin-top: 35px; }
+.local-beneficios > div { display: flex; gap: 12px; align-items: center; font-size: 12px; color: #d2e0d7; }
+.local-beneficios svg { color: #f2ca80; }
+.mapa-card { position: relative; overflow: hidden; border-radius: 13px; background: #e2e8d9; min-height: 470px; }
+.mapa-card > img { height: 100%; width: 100%; object-fit: cover; position: absolute; inset: 0; }
+.mapa-legenda { position: absolute; left: 22px; bottom: 22px; display: flex; align-items: center; gap: 12px; background: #fff; color: #1f463b; padding: 13px 18px; border-radius: 8px; box-shadow: 0 10px 40px #102b2245; }
+.mapa-pin { display: grid; place-items: center; width: 37px; height: 37px; border-radius: 50%; background: #d87859; color: #fff; }
+.mapa-legenda strong { display: block; font-size: 14px; }
+.mapa-legenda span:not(.mapa-pin) { display: block; font-size: 11px; margin-top: 3px; color: #698176; }
+/* Acessibilidade */
+.infos { background: #f5f3eb; }
+.infos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.info-card { background: #fffdf8; border: 1px solid #e8e4d8; border-radius: 9px; padding: 24px 22px; min-height: 220px; }
+.info-icon { display: grid; place-items: center; width: 49px; height: 49px; background: #e8f0e6; color: #236451; border-radius: 8px; margin-bottom: 22px; }
+.info-card h3 { font-size: 17px; margin: 0 0 11px; letter-spacing: -.025em; }
+.info-card p { font-size: 13px; line-height: 1.7; color: #62736a; margin: 0; }
+.aviso-academico { display: flex; gap: 13px; align-items: flex-start; padding: 18px 23px; border-radius: 7px; background: #e7ece0; color: #34574a; margin-top: 23px; }
+.aviso-academico svg { flex-shrink: 0; margin-top: 2px; }
+.aviso-academico p { font-size: 12px; line-height: 1.65; margin: 0; }
+/* Form */
+.contato { background: #faf8f2; }
+.contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 110px; align-items: center; }
+.contato-esquerda { align-self: stretch; position: relative; overflow: hidden; padding-top: 35px; }
+.contato-esquerda > p { color: #68786e; font-size: 15px; line-height: 1.8; max-width: 410px; }
+.contato-alternativas { display: grid; gap: 15px; margin-top: 36px; }
+.contato-alternativas div { display: flex; align-items: center; gap: 12px; color: #365f52; font-size: 13px; }
+.contato-alternativas svg { color: #c27b53; }
+.contato-decor { position: absolute; font-size: 330px; line-height: 1; color: #e9eee4; z-index: -1; bottom: -110px; left: 80px; }
+.formulario-card { background: #fff; border: 1px solid #e8e5db; border-radius: 13px; box-shadow: 0 18px 60px #2442360a; padding: 32px; }
+.formulario-card > h3 { font-size: 25px; letter-spacing: -.045em; margin: 0 0 6px; }
+.formulario-card > h3 span { color: #d9805c; }
+.formulario-card > p { margin: 0 0 27px; font-size: 13px; color: #67766e; line-height: 1.5; }
+.campo { margin-bottom: 16px; }
+.campo label { font-size: 12px; font-weight: 800; display: block; margin-bottom: 8px; }
+.campo label span { color: #a33d2b; }
+.campo input, .campo textarea { width: 100%; padding: 13px 15px; border: 1px solid #cdd6cd; background: #fcfdf9; border-radius: 6px; color: #1a3b32; font-size: 13px; line-height: 1.5; }
+.campo textarea { resize: vertical; min-height: 110px; }
+.campo input:focus, .campo textarea:focus { outline: 2px solid #e9aa77; border-color: #ac7354; }
+.campo [aria-invalid='true'] { border-color: #a84332; }
+.campo-erro { display: block; color: #a12d24; font-size: 12px; margin-top: 5px; }
+.form-enviar { width: 100%; justify-content: space-between; }
+.form-status { min-height: 7px; }
+.form-sucesso { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; font-weight: 700; color: #25643f; line-height: 1.6; margin: 12px 0 0; }
+.form-sucesso svg { flex-shrink: 0; }
+.form-rodape { display: block; color: #64776d; font-size: 11px; margin-top: 12px; line-height: 1.5; }
+/* Footer */
+.footer { background: #102f29; color: #e4eadd; padding: 66px 0 0; }
+.footer-principal { display: grid; grid-template-columns: 1.6fr .7fr 1fr; gap: 65px; padding-bottom: 65px; }
+.footer-logo { font-size: 35px; font-weight: 900; letter-spacing: -.065em; color: #fff; }
+.footer-logo > span:first-child { color: #f2c781; }
+.footer-logo-ponto { color: #d9815c; }
+.footer-principal p { font-size: 13px; color: #b3c9bc; line-height: 1.75; max-width: 300px; margin-top: 20px; }
+.footer-nav, .footer-social { display: flex; align-items: flex-start; flex-direction: column; gap: 12px; }
+.footer-nav strong, .footer-social strong { font-size: 10px; letter-spacing: .14em; color: #e6d3a6; margin-bottom: 8px; }
+.footer-nav a { font-size: 12px; color: #d2ddd3; }
+.footer-nav a:hover { color: #f2c781; }
+.social-links { display: flex; gap: 8px; }
+.social-links a { display: grid; place-items: center; width: 41px; height: 41px; border: 1px solid #59786a; border-radius: 50%; }
+.social-links a:hover { background: #2b5b4a; }
+.footer-social > span { max-width: 260px; font-size: 11px; line-height: 1.7; color: #b5c7bc; }
+.footer-final { padding: 25px 0; display: flex; justify-content: space-between; align-items: center; gap: 22px; border-top: 1px solid #4e6c60; color: #b4c9bc; font-size: 10px; letter-spacing: .08em; }
+.footer-final a { display: flex; gap: 6px; align-items: center; color: #f1ce90; font-weight: 800; }
+@media (max-width: 1100px) {
+  .nav-desktop { gap: 12px; } .nav-container { gap: 18px; } .nav-desktop a { font-size: 11px; }
+  .sobre-grid, .contato-grid { gap: 54px; } .local-grid { gap: 40px; }
+  .hero h1 { font-size: 59px; } .hero-grid { min-height: 540px; }
+  .hero-arte > img { width: 112%; }
+}
+@media (max-width: 900px) {
+  .nav-desktop, .botao-nav { display: none; } .menu-toggle { display: inline-flex; margin-left: auto; }
+  .nav-container { min-height: 76px; }
+  .nav-mobile.aberto { display: grid; gap: 0; border-top: 1px solid #e9e4da; padding: 8px 32px 20px; background: #fcfaf4; }
+  .nav-mobile a { display: block; padding: 13px 4px; border-bottom: 1px solid #ece6da; font-size: 14px; font-weight: 700; }
+  .hero-grid { grid-template-columns: 1fr 1fr; }
+  .hero-conteudo { padding-top: 82px; } .hero h1 { font-size: clamp(44px, 6vw, 57px); } .hero-conteudo > p { font-size: 15px; }
+  .hero-arte-etiqueta { right: 0; bottom: 48px; }
+  .hero-faixa-grid strong { font-size: 13px; }
+  .sobre-grid { gap: 32px; } .sobre-cartao-grande p { font-size: 29px; }
+  .local-grid { grid-template-columns: 1fr 1fr; }
+  .infos-grid { grid-template-columns: repeat(2,1fr); }
+  .footer-principal { gap: 30px; }
+}
+@media (max-width: 700px) {
+  .container { width: min(100% - 36px, 540px); }
+  .topbar { padding: 9px 18px; font-size: 8px; justify-content: center; text-align: center; }
+  .topbar span:nth-child(2) { display: none; }
+  .marca-simbolo { width: 40px; height: 40px; } .marca-nome { font-size: 22px; }
+  .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+  .hero-conteudo { padding: 72px 0 0; } .hero-eyebrow { font-size: 10px; }
+  .hero h1 { font-size: clamp(49px, 11.5vw, 77px); }
+  .hero-conteudo > p { margin-top: 24px; font-size: 15px; max-width: 420px; }
+  .hero-acoes { gap: 20px; }
+  .hero-rodape { padding-top: 32px; font-size: 9px; }
+  .hero-arte { max-height: 350px; margin-top: -4px; }
+  .hero-arte > img { width: min(100%, 440px); margin: auto; transform: translateY(-15px); }
+  .hero-arte-etiqueta { right: 5%; bottom: 36px; width: 116px; height: 80px; }
+  .hero-arte-etiqueta strong { font-size: 10px; }
+  .hero-faixa-grid { grid-template-columns: 1fr; }
+  .hero-faixa-grid > div, .hero-faixa-grid > div:first-child { min-height: 74px; padding: 17px 0; border-right: 0; border-bottom: 1px solid #4a6d62; }
+  .hero-faixa-grid > div:last-child { border-bottom: 0; }
+  .hero-faixa-grid strong { font-size: 14px; }
+  .section { padding: 68px 0; }
+  .titulo-secao { font-size: clamp(40px, 9vw, 54px); }
+  .section-topo { flex-direction: column; align-items: flex-start; gap: 13px; margin-bottom: 28px; }
+  .section-intro { max-width: 100%; }
+  .sobre-grid, .local-grid, .contato-grid { grid-template-columns: 1fr; gap: 32px; }
+  .sobre-cartao-grande p { font-size: 34px; }
+  .sobre-beneficios { gap: 9px; }
+  .agenda-toolbar { align-items: flex-start; }
+  .abas-dias { width: 100%; } .aba { min-width: 0; width: 50%; text-align: center; padding: 10px 8px; }
+  .agenda-item { grid-template-columns: 89px minmax(0,1fr); gap: 13px; padding: 22px 2px; }
+  .agenda-horario { font-size: 26px; } .agenda-horario span { display: block; font-size: 9px; margin: 5px 0 0; }
+  .agenda-info h3 { font-size: 17px; } .agenda-decor { display: none; }
+  .atracoes-grid { grid-template-columns: 1fr; gap: 18px; }
+  .atracao-foto { aspect-ratio: 1.55; }
+  .atracao-detalhes { min-height: 142px; }
+  .mapa-card { min-height: 330px; }
+  .infos-grid { grid-template-columns: 1fr; gap: 11px; }
+  .info-card { min-height: auto; padding: 21px; }
+  .info-icon { margin-bottom: 14px; }
+  .contato-esquerda { padding-top: 0; }
+  .contato-decor { display: none; }
+  .formulario-card { padding: 25px 20px; }
+  .footer { padding-top: 55px; }
+  .footer-principal { grid-template-columns: 1fr 1fr; gap: 32px; padding-bottom: 40px; }
+  .footer-principal > div:first-child { grid-column: 1 / -1; }
+  .footer-final { flex-wrap: wrap; font-size: 9px; }
+}
+@media (max-width: 390px) {
+  .hero h1 { font-size: 44px; }
+  .hero-acoes { align-items: flex-start; flex-direction: column; }
+  .sobre-cartao-grande p { font-size: 27px; }
+  .mapa-legenda { left: 12px; right: 12px; bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+</style></head><body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<header class="site-header"><div class="topbar"><span>UM ENCONTRO PARA CELEBRAR O QUE NOS UNE</span><span>EVENTO FICTÍCIO • PROJETO ACADÊMICO</span></div><div class="container nav-container"><a href="#inicio" class="marca"><span class="marca-simbolo">V<span class="marca-ponto">.</span></span><span class="marca-nome">viva<span>cultura</span><small>FESTIVAL 2026</small></span></a><nav class="nav-desktop"><a href="#inicio">Início</a><a href="#sobre">O festival</a><a href="#programacao">Programação</a><a href="#atracoes">Atrações</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a></nav><a class="botao botao-nav" href="#programacao">Ver programação ↗</a><button id="menu-btn" type="button" class="menu-toggle" aria-label="Abrir menu">☰</button></div><nav id="menu-mobile" class="nav-mobile" hidden><a href="#inicio">Início</a><a href="#sobre">O festival</a><a href="#programacao">Programação</a><a href="#atracoes">Atrações</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a></nav></header>
+<main id="conteudo"><section class="hero" id="inicio"><div class="container hero-grid"><div class="hero-conteudo"><div class="hero-eyebrow"><span class="eyebrow-traco"></span>14 — 15 NOVEMBRO • IJUÍ / RS</div><h1>Onde a <em>cultura</em><br>encontra <span>você<span class="asterisco">✳</span></span></h1><p>Dois dias para descobrir novos sons, viver a arte e celebrar o que faz nossa comunidade única.</p><div class="hero-acoes"><a href="#programacao" class="botao botao-amarelo">Explorar programação ↗</a><a href="#sobre" class="hero-link">Conheça o festival ↓</a></div><div class="hero-rodape"><span class="mini-estrela">✳</span> ARTE PARA TODOS. ENTRADA GRATUITA.</div></div><div class="hero-arte"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NTAgNjUwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IklsdXN0cmHDp8OjbyBhYnN0cmF0YSBkZSBjZWxlYnJhw6fDo28gY3VsdHVyYWwiPgo8ZGVmcz48Y2xpcFBhdGggaWQ9Im9yYiI+PGNpcmNsZSBjeD0iMzM1IiBjeT0iMzEwIiByPSIyMzciLz48L2NsaXBQYXRoPjxwYXR0ZXJuIGlkPSJkb3RzIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIyIiBmaWxsPSIjZjFjNjc5IiBvcGFjaXR5PSIuMjYiLz48L3BhdHRlcm4+PC9kZWZzPgo8Y2lyY2xlIGN4PSIzMzUiIGN5PSIzMTAiIHI9IjI0NyIgZmlsbD0iIzZlOWI4MyIgb3BhY2l0eT0iLjMiLz4KPGNpcmNsZSBjeD0iMzM1IiBjeT0iMzEwIiByPSIyMzciIGZpbGw9IiNlY2M3ODgiLz4KPGcgY2xpcC1wYXRoPSJ1cmwoI29yYikiPgo8cGF0aCBkPSJNNjYgMzAwQzE0NSAxODEgMjAxIDIyNiAyOTUgMTQ5czE2My05NSAyOTEgMTNsNTUgNDY1SDY2WiIgZmlsbD0iI2Y5ZGZhYSIvPgo8cGF0aCBkPSJNNjUgNTI0UTE1NSAzOTIgMjYyIDQ1N3QxNjQtMTggMTY4IDZsNDAgMjYwSDQwWiIgZmlsbD0iI2Q5NmU1MCIvPgo8cGF0aCBkPSJNNzMgNTk0UTE5OSA0NzggMzI3IDUzNnQzMDYtOXYxNzdINzFaIiBmaWxsPSIjYjk0ZjNkIi8+CjxwYXRoIGQ9Ik0xNDcgNTkwcTUwLTIzOCA5My0yNDQgNDctNiA1NyA2N2wxMSAxNzZaIiBmaWxsPSIjMTU0NDNiIi8+CjxwYXRoIGQ9Ik0yMDAgMzUzcS0yNS02NC01OS02MS0yNiA2LTIyIDM4IDcgMzIgMzQgNjRsLTExIDYwIDU3IDIgMTctNjNjMTktMTAgMzAtMzQgMjItNTctNy0yMS0yMC0yNi0zOCAxN1oiIGZpbGw9IiNmMWFkODAiLz4KPGNpcmNsZSBjeD0iMTkzIiBjeT0iMzE1IiByPSIzOCIgZmlsbD0iI2YwYTI3YSIvPgo8cGF0aCBkPSJNMTU3IDMxN2MtMTYtMjMtMy02MyAzMi02OSAyNi00IDQ1IDE2IDQ3IDQyLTE3LTYtMzMtMjEtNDEtMzctNSAzNi0yNSA1MC0zOCA2NFoiIGZpbGw9IiMxNzNlMzkiLz4KPHBhdGggZD0ibTI0NSAzNzkgNDctNDggMzEgMzMtNDEgNTNaIiBmaWxsPSIjZjBhMjdhIi8+CjxyZWN0IHg9IjI5MiIgeT0iMzAwIiB3aWR0aD0iMTYiIGhlaWdodD0iOTIiIHJ4PSI4IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDIgMzAwIDM0NykiIGZpbGw9IiMxNDNlMzYiLz4KPHBhdGggZD0iTTI3NCAzMjJxMjctMjcgNjQtMSAzNSAzMCA2IDU5LTMyIDMxLTY2IDMtMzctMzAtNC02MVoiIGZpbGw9IiNmOGNjN2MiIHN0cm9rZT0iIzE0M2UzNiIgc3Ryb2tlLXdpZHRoPSIxMCIvPgo8Y2lyY2xlIGN4PSIzMTEiIGN5PSIzNTAiIHI9IjE0IiBmaWxsPSIjMjM0ZDQxIi8+CjxwYXRoIGQ9Ik0zNDcgNTgycTAtMTQ2IDMwLTE5MyAyOC00NCA1NS0xMCAyOSA0MyAzMCAyMDNaIiBmaWxsPSIjMjU0ZDQzIi8+CjxwYXRoIGQ9Ik0zOTEgMzc0Yy0xMC0xOS0xMC02MCAxMi03NyAyNi0xOSA2My02IDc0IDI0cTEyIDMwLTE5IDUzWiIgZmlsbD0iI2M2NmE1MSIvPgo8cGF0aCBkPSJNMzg2IDM3NXExNSAyNiA0NiAyMmwtNCA2Mi00MyA0WiIgZmlsbD0iI2VkYjE4ZCIvPgo8Y2lyY2xlIGN4PSI0MjciIGN5PSIzMzMiIHI9IjQxIiBmaWxsPSIjZThhMDdhIi8+CjxwYXRoIGQ9Ik0zODIgMzMxcS01LTU2IDM0LTY4IDUzLTE2IDY3IDQyLTIzLTE5LTQwLTQyLTQgMzktNjEgNjhaIiBmaWxsPSIjMTQzYjM2Ii8+CjxwYXRoIGQ9Ik0zOTQgMzg2cS03MC02NS04OC02My0yNyA5LTcgMzVsODYgOTBaIiBmaWxsPSIjZWRiMThkIi8+CjxwYXRoIGQ9Im00NTcgMzk1IDUzLTExNnExMi0yMyAyNi0xMCAxMCA5IDMgMjdMNDg5IDQ0NFoiIGZpbGw9IiNlOGEwN2EiLz4KPHBhdGggZD0iTTUwMCAzNTVxLTItNTEgMjMtNzggMjUtMjcgNDQtMTMgMjIgMTYgOCA1NC0xMSAzMS00NCA1M1oiIGZpbGw9IiNmNWM4N2UiLz4KPHBhdGggZD0iTTQ2MyA1NDZxMjctNjUgNzctODlsNDkgMTQzSDQ3MFoiIGZpbGw9IiMxZjVlNTQiLz4KPHBhdGggZD0iTTEwMCAxNzBxNDUtNDEgOTAtMTBNMTI1IDEzMnEyNy0yMCA1NS04IiBzdHJva2U9IiNkYjdiNTkiIHN0cm9rZS13aWR0aD0iMTEiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNNDE4IDE2NXE2Ni0zNSAxMTcgMTdNNDU0IDEyNHE1NS0xOCA5NSA1IiBzdHJva2U9IiNjNzZjNGQiIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJtMjcwIDEzMiAxMS0zMSAxMCAzMSAzMSA5LTMxIDEwLTEwIDMxLTExLTMxLTMxLTEwWiIgZmlsbD0iI2RmODI2MCIvPgo8Y2lyY2xlIGN4PSIzMzYiIGN5PSIxOTYiIHI9IjEwIiBmaWxsPSIjZDM3YTVhIi8+PGNpcmNsZSBjeD0iMzY1IiBjeT0iMTUxIiByPSI1IiBmaWxsPSIjZDM3YTVhIi8+PGNpcmNsZSBjeD0iMTQzIiBjeT0iMjM0IiByPSI3IiBmaWxsPSIjZGY4MjYwIi8+CjxwYXRoIGQ9Im00OTMgMjA1IDE3IDEyIDE3LTEyLTcgMTkgMTUgMTEtMjEtMS03IDIwLTYtMTktMjAtMiAxNS05WiIgZmlsbD0iIzE4NGM0MiIvPgo8L2c+CjxjaXJjbGUgY3g9IjMzNSIgY3k9IjMxMCIgcj0iMjM3IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNGRjYTkiIHN0cm9rZS13aWR0aD0iOSIvPgo8ZyBmaWxsPSIjZjdjZjgwIj48cGF0aCBkPSJtNjkgMTIzIDkgMjUgMjUgOS0yNSA5LTkgMjUtOS0yNS0yNS05IDI1LTlaIi8+PHBhdGggZD0ibTU3MiA4NCA4IDIzIDIzIDgtMjMgOC04IDIzLTgtMjMtMjMtOCAyMy04WiIvPjxwYXRoIGQ9Im01NTggNDY5IDkgMjYgMjYgOS0yNiA5LTkgMjYtOS0yNi0yNi05IDI2LTlaIi8+PGNpcmNsZSBjeD0iMTA1IiBjeT0iNDU1IiByPSI5Ii8+PGNpcmNsZSBjeD0iNTE1IiBjeT0iNTUiIHI9IjUiLz48L2c+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y4ZTljMCIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxwYXRoIGQ9Im01NiAzNDUgMTgtMTVtLTI1IDQ0IDI2LTZtNDM4LTIxMSAxNiAxNG0tNCAzNyAyMiA3Ii8+PC9nPgo8cGF0aCBkPSJNMTI3IDU0MmMyOC0xNSA0NC0xMiA1NiA1bTI2OC0xOWMxNy0xNCA0MS0xNCA1OS01IiBzdHJva2U9IiNmOWRjYjIiIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=" alt="" width="650" height="650"><div class="hero-arte-etiqueta"><span>VIVA</span><strong>A NOSSA CULTURA</strong><span>2026</span></div></div></div><div class="hero-faixa"><div class="container hero-faixa-grid"><div><span style="color:#f4c982;font-size:23px">▦</span><span><strong>14 e 15 de novembro de 2026</strong><small>SÁBADO E DOMINGO</small></span></div><div><span style="color:#f4c982;font-size:23px">⌖</span><span><strong>Praça da República</strong><small>IJUÍ / RS — LOCAL SUGERIDO</small></span></div><div><span style="color:#f4c982;font-size:23px">◇</span><span><strong>Entrada gratuita</strong><small>EVENTO FICTÍCIO / DEMONSTRAÇÃO</small></span></div></div></div></section>
+<section class="section sobre" id="sobre"><div class="container sobre-grid"><div><span class="section-kicker"><span class="kicker-dot"></span> SOBRE O FESTIVAL</span><h2 class="titulo-secao">Nossa cidade.<br><em>Nossas histórias.</em><br>Nossa cultura.</h2><p class="texto-muted sobre-texto">O Festival Viva Cultura é um projeto acadêmico que imagina um encontro aberto à comunidade, reunindo artistas, tradições, ideias e pessoas em um mesmo espaço.</p><a href="#atracoes" class="link-destaque">Descubra as atrações ↗</a></div><div class="sobre-lado"><div class="sobre-cartao-grande"><span class="sobre-asterisco">✳</span><p>Cultura é tudo aquilo que a gente <em>compartilha.</em></p><span class="sobre-assinatura">VIVA CULTURA / EDIÇÃO 2026</span></div><div class="sobre-beneficios"><div><span>♫</span><strong>Música</strong><span>Novos ritmos e talentos.</span></div><div><span>✹</span><strong>Arte</strong><span>Criatividade para todos.</span></div><div><span>✤</span><strong>Comunidade</strong><span>Encontros e histórias.</span></div><div><span>♡</span><strong>Conexões</strong><span>Experiências memoráveis.</span></div></div></div></div></section>
+<section id="programacao" class="section programacao"><div class="container"><div class="section-topo"><div><span class="section-kicker"><span class="kicker-dot"></span> AGENDA CULTURAL</span><h2 class="titulo-secao">Dois dias.<br><em>Mil experiências.</em></h2></div><p class="texto-muted section-intro">Planeje sua visita e encontre a atividade perfeita para viver com amigos e família.</p></div><div class="agenda-toolbar"><div class="abas-dias"><button class="aba ativa" id="sabado" aria-pressed="true"><strong>Sábado</strong><span>14 de novembro</span></button><button class="aba" id="domingo" aria-pressed="false"><strong>Domingo</strong><span>15 de novembro</span></button></div><span class="agenda-observacao">◷ Horários fictícios, sujeitos a alterações</span></div><div class="agenda-lista" id="agenda-lista"></div><p class="agenda-nota">* Programação criada exclusivamente para demonstração acadêmica. Não há evento ou inscrição real.</p></div></section>
+<section id="atracoes" class="section atracoes"><div class="container"><div class="section-topo atracoes-topo"><div><span class="section-kicker"><span class="kicker-dot"></span> VIVA CADA MOMENTO</span><h2 class="titulo-secao">Tem lugar para <em>todo mundo.</em></h2></div><p class="texto-muted section-intro">Um festival feito de encontros, novas descobertas e espaço para todas as expressões.</p></div><div class="atracoes-grid"><article class="atracao-card"><div class="atracao-foto"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NDAgNDMwIj48cmVjdCB3aWR0aD0iNTQwIiBoZWlnaHQ9IjQzMCIgZmlsbD0iI2NkZGJkMCIvPjxjaXJjbGUgY3g9IjI4OCIgY3k9IjIwMiIgcj0iMTY1IiBmaWxsPSIjZjVjZjhkIi8+PHBhdGggZD0iTTAgMzI2cTEwOS03NCAyMDcgMTd0MzMzLTd2OTRIMFoiIGZpbGw9IiM2Yjk4N2MiLz48cGF0aCBkPSJNMjE2IDEwOHE0NS0xNSA2OSAyNmw0MyA3NS0zOCAyMi01Mi03MC0xNCA3Ny01MCAxMiAxNy05MXE0LTM2IDI1LTUxWiIgZmlsbD0iI2RiN2M1YyIvPjxwYXRoIGQ9Ik0yMjEgMjAxcS01MS0xNS03OCAxNS0yMiAyNSAyIDU5IDIzIDMzIDY3IDIxbDIxLTI5IDM0IDIzcTQzIDE1IDcyLTI3IDIzLTMyLTYtNjYtMzEtMzUtNzAtMjBaIiBmaWxsPSIjYjg2NDQ3IiBzdHJva2U9IiMxODNlMzgiIHN0cm9rZS13aWR0aD0iOSIvPjxjaXJjbGUgY3g9IjE5NSIgY3k9IjI1MiIgcj0iMzEiIGZpbGw9IiNlZmM2N2QiLz48Y2lyY2xlIGN4PSIxOTUiIGN5PSIyNTIiIHI9IjEwIiBmaWxsPSIjMTYzZTM4Ii8+PHBhdGggZD0ibTI0NSAyMjAgMTUzLTEzMSIgc3Ryb2tlPSIjMTgzZTM4IiBzdHJva2Utd2lkdGg9IjI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJtMjQ1IDIxNiAxNTAtMTI3IiBzdHJva2U9IiNmNmQ3OTciIHN0cm9rZS13aWR0aD0iMTMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0zNjUgMTE3cTMwLTEzIDM4LTM4TTM3NSAxMjlxMzUtOCA0Ny0yOSIgc3Ryb2tlPSIjZjdlMmFhIiBzdHJva2Utd2lkdGg9IjciIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxnIGZpbGw9IiMxYjUzNDQiPjxjaXJjbGUgY3g9IjEwNyIgY3k9IjEzNSIgcj0iMTIiLz48cGF0aCBkPSJNMTEyIDEzMlY3OGwzNS0xMXYyMGwtMjMgN3YzM1oiLz48Y2lyY2xlIGN4PSI0MzEiIGN5PSIyOTciIHI9IjEyIi8+PHBhdGggZD0iTTQzNiAyOTN2LTU1bDM4LTEydjIxbC0yNCA3djMyWiIvPjwvZz48ZyBmaWxsPSIjZGU4NTVmIj48cGF0aCBkPSJtNDIzIDE1NCA5IDI1IDI1IDktMjUgOS05IDI1LTktMjUtMjUtOSAyNS05WiIvPjxjaXJjbGUgY3g9Ijk3IiBjeT0iMzAyIiByPSI4Ii8+PC9nPjwvc3ZnPgo=" alt="Ilustração de violão e notas musicais"><span class="atracao-numero">01 / 03</span></div><div class="atracao-detalhes"><span class="atracao-categoria">MÚSICA</span><h3>Música que aproxima</h3><p>Artistas locais e sons de muitos estilos.</p><a href="#programacao" class="atracao-seta">↗</a></div></article><article class="atracao-card"><div class="atracao-foto atracao-foto-1"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NDAgNDMwIj48cmVjdCB3aWR0aD0iNTQwIiBoZWlnaHQ9IjQzMCIgZmlsbD0iI2YwZGNjMiIvPjxwYXRoIGQ9Ik0wIDBoMTI1djQzMEgweiIgZmlsbD0iI2U3YjU5NiIvPjxjaXJjbGUgY3g9IjI4NSIgY3k9IjIxOSIgcj0iMTcxIiBmaWxsPSIjZThhMjgwIi8+PHBhdGggZD0iTTAgMzUwcTEyMC04MCAyNDEtMTN0Mjk5LTd2MTAwSDBaIiBmaWxsPSIjYmY2MzRiIi8+PHBhdGggZD0iTTIxMCA0MzBxLTgtMTI1IDY1LTIwNiA1NC01NyA5MS0xMSA0OCA2MSA0MSAyMTdaIiBmaWxsPSIjMjI1MjQ5Ii8+PHBhdGggZD0iTTIyNCAxNThxLTExLTQ0IDE0LTczIDM3LTQwIDgyLTExIDQzIDI3IDMxIDcxLTEyIDUxLTY0IDYxWiIgZmlsbD0iIzE2M2YzOSIvPjxjaXJjbGUgY3g9IjI4NyIgY3k9IjE1MCIgcj0iNjYiIGZpbGw9IiNkODgyNWYiLz48cGF0aCBkPSJNMjIzIDE0NHEtNS04NCA0Ny05MCA2MS03IDgxIDc4LTQ1LTUtNjEtNTAtMTMgNDctNjcgNjJaIiBmaWxsPSIjMTczZTM5Ii8+PHBhdGggZD0iTTI2OCAyNThxLTkyIDIwLTE0NS01OWwtMjQtNTNxLTEyLTIzLTI5LTEwLTEzIDEwLTUgMjcgNDUgMTM3IDE2MSAxNDUiIGZpbGw9IiNkODgyNWYiLz48cGF0aCBkPSJNMzUzIDI1MHE2Ni00NSA5OS0xMTFsMTMtMzhxNy0yMiAyMy0xNCAxNyA3IDEwIDI4LTEzIDE0MS0xMTYgMjA0IiBmaWxsPSIjZDg4MjVmIi8+PHBhdGggZD0ibTc1IDEwMCA5LTI1IDkgMjUgMjQgMTAtMjQgOC05IDI0LTktMjQtMjQtOFoiIGZpbGw9IiNmOWU3YmQiLz48cGF0aCBkPSJtNDQyIDI4MCAxMS0zMiAxMSAzMiAzMCAxMC0zMCAxMi0xMSAzMC0xMS0zMC0zMC0xMloiIGZpbGw9IiNmOGQ2OWEiLz48cGF0aCBkPSJNMTIyIDMzMHEzMi00NyA3NS0yNE00MjMgNjdxLTI4IDE2LTI5IDU2IiBzdHJva2U9IiNmZmYxY2MiIHN0cm9rZS13aWR0aD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPgo=" alt="Ilustração artística de dança"><span class="atracao-numero">02 / 03</span></div><div class="atracao-detalhes"><span class="atracao-categoria">ARTE & DANÇA</span><h3>Arte em movimento</h3><p>Dança, expressões e oficinas criativas.</p><a href="#programacao" class="atracao-seta">↗</a></div></article><article class="atracao-card"><div class="atracao-foto atracao-foto-2"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NDAgNDMwIj48cmVjdCB3aWR0aD0iNTQwIiBoZWlnaHQ9IjQzMCIgZmlsbD0iI2YzZGNiMiIvPjxjaXJjbGUgY3g9IjI2NiIgY3k9IjIxMSIgcj0iMTc1IiBmaWxsPSIjZTVhZjc2Ii8+PHBhdGggZD0iTTAgMzI4cTEyNS01NiAyNjAgMjEgMTI0IDY3IDI4MC0xM3Y5NEgwWiIgZmlsbD0iIzY4ODk3NSIvPjxlbGxpcHNlIGN4PSIyNjkiIGN5PSIyODUiIHJ4PSIxNzAiIHJ5PSI3MSIgZmlsbD0iI2Y5ZWVlMCIvPjxlbGxpcHNlIGN4PSIyNzAiIGN5PSIyODEiIHJ4PSIxNDUiIHJ5PSI0OCIgZmlsbD0iI2Y0Y2I4OSIvPjxwYXRoIGQ9Ik0xNzEgMjM3cTU1LTEwOSAxMTMtNjkgNDggMzEgMTUgODgtNDEgNTktMTI4LTE5WiIgZmlsbD0iI2NmNmE0NSIvPjxwYXRoIGQ9Ik0xOTQgMjMxcTMyLTU4IDcxLTQ0TTE5NCAyNDlxMzItMzkgNzktMzgiIHN0cm9rZT0iI2VjYWM3MiIgc3Ryb2tlLXdpZHRoPSIxMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iMzYwIiBjeT0iMjQ4IiByPSI1MyIgZmlsbD0iI2QzN2I0YyIvPjxjaXJjbGUgY3g9IjM2MCIgY3k9IjI0OCIgcj0iMzMiIGZpbGw9IiNmOGQ4OWYiLz48cGF0aCBkPSJNMzY0IDIxMnEtMTgtNDUgMTktNzAiIHN0cm9rZT0iIzI0NGUzYyIgc3Ryb2tlLXdpZHRoPSIxMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTM3NSAxNTRxMi0zMiAzNC0yNC05IDMxLTM0IDI0WiIgZmlsbD0iIzRlN2I1OCIvPjxwYXRoIGQ9Ik0xMzAgMTcwcS0zMi02NSA4LTk2IDE3IDQzLTggOTZaIiBmaWxsPSIjNDA3NDU0Ii8+PHBhdGggZD0iTTE0MiAxODNxMTgtNzYgNjItNjMtMjIgNjAtNjIgNjNaIiBmaWxsPSIjNzVhMzZiIi8+PHBhdGggZD0ibTQxMCA3MyAxMSAzMSAzMSAxMS0zMSAxMS0xMSAzMS0xMS0zMS0zMS0xMSAzMS0xMVoiIGZpbGw9IiNmZmYwY2MiLz48Y2lyY2xlIGN4PSI5MiIgY3k9IjI2NyIgcj0iMTIiIGZpbGw9IiNkNjZjNTIiLz48Y2lyY2xlIGN4PSI0NjAiIGN5PSIyNTkiIHI9IjExIiBmaWxsPSIjZDY2YzUyIi8+PC9zdmc+Cg==" alt="Ilustração de alimentos"><span class="atracao-numero">03 / 03</span></div><div class="atracao-detalhes"><span class="atracao-categoria">GASTRONOMIA</span><h3>Sabores e encontros</h3><p>Uma celebração da nossa gastronomia.</p><a href="#programacao" class="atracao-seta">↗</a></div></article></div></div></section>
+<section id="localizacao" class="section localizacao"><div class="container local-grid"><div class="local-info"><span class="section-kicker kicker-claro"><span class="kicker-dot"></span> ONDE ACONTECE</span><h2 class="titulo-secao titulo-claro">O melhor lugar<br>é <em>estar junto.</em></h2><p>Para esta simulação, escolhemos a Praça da República, em Ijuí (RS), como local ilustrativo do festival.</p><div class="endereco-bloco"><span>⌖</span><div><strong>Praça da República</strong><span>Ijuí — Rio Grande do Sul</span><small>Local hipotético; evento não confirmado.</small></div></div><a class="botao botao-amarelo" href="https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a+da+Rep%C3%BAblica+Iju%C3%AD+RS" target="_blank" rel="noopener noreferrer">Consultar no Google Maps ↗</a><div class="local-beneficios"><div>◈ Consulte o trajeto antes de sair</div><div>◇ Sem venda de ingressos</div><div>✳ Priorize transporte acessível</div></div></div><div class="mapa-card"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODAgNTkwIj48cmVjdCB3aWR0aD0iNjgwIiBoZWlnaHQ9IjU5MCIgZmlsbD0iI2UzZWJkZiIvPjxwYXRoIGQ9Ik0wIDBoMjI1bC03OCAyMjVIMFoiIGZpbGw9IiNjNWQ5YzAiLz48cGF0aCBkPSJNNTQwIDBoMTQwdjI2MGwtOTMtNjlaIiBmaWxsPSIjYmVkOGJkIi8+PHBhdGggZD0iTTQxOCA0MjhoMjYydjE2MkgzMTNaIiBmaWxsPSIjY2JkY2M3Ii8+PHBhdGggZD0iTTAgNDY4IDIxNiAzNjdsNzYgMjIzSDBaIiBmaWxsPSIjYzVkN2MzIi8+PHBhdGggZD0iTTg5LTUwIDI4MCA2NDBNLTEwIDI4MGw3NDAtMTI5TS0zNSA0NzBsNzYxLTE3MSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjYxIi8+PHBhdGggZD0iTS0yOCA4NyA3MzIgNTU2TTQ5NS0yMCAyMTEgNjIxIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNDciLz48cGF0aCBkPSJNODktNTAgMjgwIDY0ME0tMTAgMjgwbDc0MC0xMjlNLTM1IDQ3MGw3NjEtMTcxIiBzdHJva2U9IiNkNGQ5Y2MiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iOCAxMCIvPjxwYXRoIGQ9Ik0tMjggODcgNzMyIDU1Nk00OTUtMjAgMjExIDYyMSIgc3Ryb2tlPSIjZDRkOWNjIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjggMTAiLz48cGF0aCBkPSJtMTI5IDcwIDIzIDgwIDQ4LTctMjMtODNaTTQ3NSAzOTRsOTEgNSAyOCA3NS05MS0zWiIgZmlsbD0iIzkzYjM5MSIvPjxnIGZpbGw9IiM5OWJiOTMiPjxjaXJjbGUgY3g9IjYwIiBjeT0iMTAwIiByPSIyMyIvPjxjaXJjbGUgY3g9IjQ4IiBjeT0iMTU1IiByPSIxOCIvPjxjaXJjbGUgY3g9IjU2NCIgY3k9IjUyIiByPSIzMCIvPjxjaXJjbGUgY3g9IjYxNSIgY3k9IjY1IiByPSIxNiIvPjxjaXJjbGUgY3g9IjU1MSIgY3k9IjUwNSIgcj0iMTgiLz48Y2lyY2xlIGN4PSI2MTIiIGN5PSI1NDIiIHI9IjI1Ii8+PGNpcmNsZSBjeD0iNzIiIGN5PSI1MjAiIHI9IjI1Ii8+PGNpcmNsZSBjeD0iMTE4IiBjeT0iNTQwIiByPSIxOCIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDQgMjQxKSI+PGVsbGlwc2UgY3k9IjExNSIgcng9Ijg1IiByeT0iMjAiIGZpbGw9IiM0ZjcxNjAiIG9wYWNpdHk9Ii4yIi8+PHBhdGggZD0iTTAgMEMtNTQgMC05NCA0Mi05NCA5NGMwIDY5IDk0IDE1MyA5NCAxNTNzOTQtODQgOTQtMTUzQzk0IDQyIDU0IDAgMCAwWiIgZmlsbD0iI2M2NmU0ZSIgc3Ryb2tlPSIjZmZmYWYxIiBzdHJva2Utd2lkdGg9IjciLz48Y2lyY2xlIGN5PSI4NiIgcj0iNDIiIGZpbGw9IiNmYmYwZDYiLz48cGF0aCBkPSJtLTIwIDc2IDE2IDI5IDM2LTQ5IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNDViNDkiIHN0cm9rZS13aWR0aD0iMTEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvZz48ZyBmaWxsPSIjMzU1YzRkIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9IjIiPjx0ZXh0IHg9IjYzIiB5PSIzMjYiIHRyYW5zZm9ybT0icm90YXRlKC0xMiA2MyAzMjYpIj5SVUEgRVhFTVBMTzwvdGV4dD48dGV4dCB4PSI0NTUiIHk9IjIxMCIgdHJhbnNmb3JtPSJyb3RhdGUoLTEwIDQ1NSAyMTApIj5DRU5UUk88L3RleHQ+PC9nPjwvc3ZnPgo=" alt="Mapa ilustrativo"><div class="mapa-legenda"><span class="mapa-pin">⌖</span><div><strong>Praça da República</strong><span>Ponto ilustrativo • Ijuí/RS</span></div></div></div></div></section>
+<section id="acessibilidade" class="section infos"><div class="container"><div class="section-topo"><div><span class="section-kicker"><span class="kicker-dot"></span> INFORMAÇÕES IMPORTANTES</span><h2 class="titulo-secao">Um festival pensado<br><em>para acolher.</em></h2></div><p class="texto-muted section-intro">Acesso simples à informação é parte da experiência. Confira o que você precisa saber.</p></div><div class="infos-grid"><article class="info-card"><span class="info-icon">♿</span><h3>Acessibilidade digital</h3><p>Interface adaptada a celular, navegação por teclado e descrições de imagens.</p></article><article class="info-card"><span class="info-icon">♡</span><h3>Espaço para todos</h3><p>Em um evento real, consulte com a organização os recursos presenciais disponíveis.</p></article><article class="info-card"><span class="info-icon">▣</span><h3>Consulte pelo celular</h3><p>Programação, atrações e localização no mesmo lugar, em qualquer tamanho de tela.</p></article><article class="info-card"><span class="info-icon">✓</span><h3>Seus dados protegidos</h3><p>O formulário apenas valida os campos; nenhuma informação é enviada ou armazenada.</p></article></div><div class="aviso-academico"><p><strong>Aviso:</strong> o Festival Viva Cultura é fictício e foi criado para fins de aprendizagem. Datas, atrações e atividades são exemplos.</p></div></div></section>
+<section id="contato" class="section contato"><div class="container contato-grid"><div class="contato-esquerda"><span class="section-kicker"><span class="kicker-dot"></span> FALE COM A GENTE</span><h2 class="titulo-secao">Boas ideias<br>merecem <em>conversa.</em></h2><p>Ficou com alguma dúvida sobre o projeto? Teste o formulário de demonstração ao lado.</p><div class="contato-alternativas"><div>✉ Formulário didático, sem envio real</div><div>◇ Use somente dados fictícios nos testes</div></div></div><div class="formulario-card"><h3>Deixe sua mensagem <span>✳</span></h3><p>Exemplo de formulário com validação local, sem armazenamento.</p><form id="contact-form" novalidate><div class="campo"><label for="nome">Nome de teste *</label><input id="nome" placeholder="Ex.: Visitante Exemplo"><small class="campo-erro" id="nome-error"></small></div><div class="campo"><label for="email">E-mail de teste *</label><input id="email" type="email" placeholder="exemplo@exemplo.com"><small class="campo-erro" id="email-error"></small></div><div class="campo"><label for="mensagem">Mensagem *</label><textarea id="mensagem" rows="4" placeholder="Escreva uma mensagem de teste..."></textarea><small class="campo-erro" id="mensagem-error"></small></div><button class="botao botao-escuro form-enviar">Validar formulário ↗</button><div class="form-status" id="form-status" role="status"></div><small class="form-rodape">Não informe dados pessoais reais. Esta é uma demonstração acadêmica.</small></form></div></div></section></main>
+<footer class="footer"><div class="container"><div class="footer-principal"><div><a href="#inicio" class="footer-logo">viva<span>cultura</span><span class="footer-logo-ponto">.</span></a><p>Cultura que aproxima. Histórias que ficam.<br>Projeto acadêmico de evento fictício.</p></div><div class="footer-nav"><strong>EXPLORE</strong><a href="#programacao">Programação</a><a href="#atracoes">Atrações</a><a href="#localizacao">Localização</a><a href="#acessibilidade">Acessibilidade</a><a href="#contato">Contato</a></div><div class="footer-social"><strong>REDES SOCIAIS (EXEMPLOS)</strong><div class="social-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">IG</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">FB</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YT</a></div><span>Os links levam às páginas gerais das plataformas, não a perfis do festival.</span></div></div><div class="footer-final"><span>© 2026 FESTIVAL VIVA CULTURA • PROJETO ACADÊMICO</span><a href="#inicio">Voltar ao topo ↗</a></div></div></footer>
+<script>
+const agendas={sabado:[['10:00','Artes','Abertura do festival','Boas-vindas e apresentação da programação.','Palco principal'],['11:30','Oficina','Oficina de arte coletiva','Pintura, cores e criatividade para todas as idades.','Espaço criativo'],['14:00','Gastronomia','Sabores da nossa terra','Encontro demonstrativo sobre culinária regional.','Praça gastronômica'],['17:00','Música','Vozes da cidade','Apresentações musicais de artistas da comunidade.','Palco principal']],domingo:[['10:00','Artes','Café com cultura','Roda de conversa sobre tradições e memória local.','Espaço comunitário'],['13:30','Dança','Movimento e expressão','Oficina aberta com ritmos e dança.','Espaço criativo'],['15:00','Artes','Feira de artistas','Mostra ilustrativa de trabalhos e técnicas artesanais.','Alameda cultural'],['18:00','Música','Show de encerramento','Música para fechar dois dias de celebração.','Palco principal']]};
+function renderAgenda(d){document.getElementById('agenda-lista').innerHTML=agendas[d].map(item=>'<article class="agenda-item"><div class="agenda-horario">'+item[0]+'<span>HRS</span></div><div class="agenda-info"><span class="categoria-chip">'+item[1]+'</span><h3>'+item[2]+'</h3><p>'+item[3]+'</p><span class="agenda-local">⌖ '+item[4]+'</span></div><span class="agenda-decor">↗</span></article>').join('');for(const key of ['sabado','domingo']){const active=key===d;document.getElementById(key).className=active?'aba ativa':'aba';document.getElementById(key).setAttribute('aria-pressed',String(active));}}
+renderAgenda('sabado');for(const d of ['sabado','domingo'])document.getElementById(d).onclick=()=>renderAgenda(d);
+const btn=document.getElementById('menu-btn'), menu=document.getElementById('menu-mobile');btn.onclick=()=>{menu.hidden=!menu.hidden;menu.classList.toggle('aberto',!menu.hidden);btn.setAttribute('aria-expanded',String(!menu.hidden))};menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{menu.hidden=true;menu.classList.remove('aberto')});
+document.getElementById('contact-form').addEventListener('submit',e=>{e.preventDefault();const vals=['nome','email','mensagem'].map(id=>document.getElementById(id).value.trim());const err=[vals[0]?'':'Informe um nome fictício para o teste.',/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(vals[1])?'':'Informe um e-mail válido de teste.',vals[2].length>=10?'':'Escreva pelo menos 10 caracteres.'];['nome','email','mensagem'].forEach((id,i)=>document.getElementById(id+'-error').textContent=err[i]);document.getElementById('form-status').textContent=err.some(Boolean)?'':'Campos validados! Nenhuma mensagem foi enviada ou armazenada.';});
+</script></body></html>

@@ -1,0 +1,18 @@
+﻿ID;Teste;Procedimento;Resultado esperado;Status;Data;Responsável;Evidência;Pendência/Correção
+T01;Programação legível no celular;360px e 390px;Sem cortes nem rolagem horizontal;Não executado;;;;
+T02;Links internos;Menu e CTAs;Âncoras corretas;Não executado;;;;
+T03;Links externos;Redes e mapa;Links válidos e autorizados;Não executado;;;;
+T04;Campos obrigatórios;Enviar vazio;Erros específicos;Não executado;;;;
+T05;Formato de e-mail;Informar e-mail inválido;Erro de formato;Não executado;;;;
+T06;Formulário demonstrativo;Dados fictícios válidos;Validado sem envio;Não executado;;;;
+T07;Carregamento de imagens;Navegar por todas as seções;Todas carregam;Não executado;;;;
+T08;Textos alternativos;Inspecionar imagens;alt adequado;Não executado;;;;
+T09;Contraste;Auditoria WCAG AA;Razão apropriada;Não executado;;;;
+T10;Navegação pelo teclado;Tab/Enter/Shift+Tab;Foco visível e acesso a tudo;Não executado;;;;
+T11;Responsividade;768px e 1366px;Sem sobreposição;Não executado;;;;
+T12;HTTPS;Abrir URL pública;HTTPS sem conteúdo misto;Não executado;;;;
+T13;Acesso público;Janela anônima;Acesso sem login;Não executado;;;;
+T14;Revisão de segredos;Git e fontes;Sem tokens/dados reais;Não executado;;;;
+T15;Novo deploy;Commit e integração;Atualização publicada;Não executado;;;;
+T16;Coerência dos dados;Revisar programação;Datas e locais consistentes;Não executado;;;;
+T17;Compatibilidade;Chrome + Firefox ou Edge;Funções principais OK;Não executado;;;;

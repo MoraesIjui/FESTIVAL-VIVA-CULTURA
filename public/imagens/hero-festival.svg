@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 650" role="img" aria-label="Ilustração abstrata de celebração cultural">
+<defs><clipPath id="orb"><circle cx="335" cy="310" r="237"/></clipPath><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#f1c679" opacity=".26"/></pattern></defs>
+<circle cx="335" cy="310" r="247" fill="#6e9b83" opacity=".3"/>
+<circle cx="335" cy="310" r="237" fill="#ecc788"/>
+<g clip-path="url(#orb)">
+<path d="M66 300C145 181 201 226 295 149s163-95 291 13l55 465H66Z" fill="#f9dfaa"/>
+<path d="M65 524Q155 392 262 457t164-18 168 6l40 260H40Z" fill="#d96e50"/>
+<path d="M73 594Q199 478 327 536t306-9v177H71Z" fill="#b94f3d"/>
+<path d="M147 590q50-238 93-244 47-6 57 67l11 176Z" fill="#15443b"/>
+<path d="M200 353q-25-64-59-61-26 6-22 38 7 32 34 64l-11 60 57 2 17-63c19-10 30-34 22-57-7-21-20-26-38 17Z" fill="#f1ad80"/>
+<circle cx="193" cy="315" r="38" fill="#f0a27a"/>
+<path d="M157 317c-16-23-3-63 32-69 26-4 45 16 47 42-17-6-33-21-41-37-5 36-25 50-38 64Z" fill="#173e39"/>
+<path d="m245 379 47-48 31 33-41 53Z" fill="#f0a27a"/>
+<rect x="292" y="300" width="16" height="92" rx="8" transform="rotate(-42 300 347)" fill="#143e36"/>
+<path d="M274 322q27-27 64-1 35 30 6 59-32 31-66 3-37-30-4-61Z" fill="#f8cc7c" stroke="#143e36" stroke-width="10"/>
+<circle cx="311" cy="350" r="14" fill="#234d41"/>
+<path d="M347 582q0-146 30-193 28-44 55-10 29 43 30 203Z" fill="#254d43"/>
+<path d="M391 374c-10-19-10-60 12-77 26-19 63-6 74 24q12 30-19 53Z" fill="#c66a51"/>
+<path d="M386 375q15 26 46 22l-4 62-43 4Z" fill="#edb18d"/>
+<circle cx="427" cy="333" r="41" fill="#e8a07a"/>
+<path d="M382 331q-5-56 34-68 53-16 67 42-23-19-40-42-4 39-61 68Z" fill="#143b36"/>
+<path d="M394 386q-70-65-88-63-27 9-7 35l86 90Z" fill="#edb18d"/>
+<path d="m457 395 53-116q12-23 26-10 10 9 3 27L489 444Z" fill="#e8a07a"/>
+<path d="M500 355q-2-51 23-78 25-27 44-13 22 16 8 54-11 31-44 53Z" fill="#f5c87e"/>
+<path d="M463 546q27-65 77-89l49 143H470Z" fill="#1f5e54"/>
+<path d="M100 170q45-41 90-10M125 132q27-20 55-8" stroke="#db7b59" stroke-width="11" fill="none" stroke-linecap="round"/>
+<path d="M418 165q66-35 117 17M454 124q55-18 95 5" stroke="#c76c4d" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="m270 132 11-31 10 31 31 9-31 10-10 31-11-31-31-10Z" fill="#df8260"/>
+<circle cx="336" cy="196" r="10" fill="#d37a5a"/><circle cx="365" cy="151" r="5" fill="#d37a5a"/><circle cx="143" cy="234" r="7" fill="#df8260"/>
+<path d="m493 205 17 12 17-12-7 19 15 11-21-1-7 20-6-19-20-2 15-9Z" fill="#184c42"/>
+</g>
+<circle cx="335" cy="310" r="237" fill="none" stroke="#f4dca9" stroke-width="9"/>
+<g fill="#f7cf80"><path d="m69 123 9 25 25 9-25 9-9 25-9-25-25-9 25-9Z"/><path d="m572 84 8 23 23 8-23 8-8 23-8-23-23-8 23-8Z"/><path d="m558 469 9 26 26 9-26 9-9 26-9-26-26-9 26-9Z"/><circle cx="105" cy="455" r="9"/><circle cx="515" cy="55" r="5"/></g>
+<g fill="none" stroke="#f8e9c0" stroke-width="5" stroke-linecap="round"><path d="m56 345 18-15m-25 44 26-6m438-211 16 14m-4 37 22 7"/></g>
+<path d="M127 542c28-15 44-12 56 5m268-19c17-14 41-14 59-5" stroke="#f9dcb2" fill="none" stroke-width="8" stroke-linecap="round"/>
+</svg>
