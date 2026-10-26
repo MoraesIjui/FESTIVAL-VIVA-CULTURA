@@ -14,7 +14,7 @@ export function Localizacao() {
           <div className="local-beneficios"><div><Navigation size={20} aria-hidden="true"/><span>Consulte o trajeto antes de sair</span></div><div><Ticket size={20} aria-hidden="true"/><span>Sem venda de ingressos</span></div><div><TrainFront size={20} aria-hidden="true"/><span>Priorize transporte acessível</span></div></div>
         </div>
         <div className="mapa-card" aria-label="Ilustração de mapa sem geolocalização precisa. Utilize o link Google Maps para ver a praça.">
-          <img src="/imagens/mapa-ilustrativo.svg" alt="Mapa ilustrativo estilizado com ruas, área verde e marcador do festival" loading="lazy" width="680" height="590" />
+          <img src={`${import.meta.env.BASE_URL}imagens/mapa-ilustrativo.svg`} alt="Mapa ilustrativo estilizado com ruas, área verde e marcador do festival" loading="lazy" width="680" height="590" />
           <div className="mapa-legenda"><span className="mapa-pin"><MapPin size={20} aria-hidden="true"/></span><div><strong>Praça da República</strong><span>Ponto ilustrativo • Ijuí/RS</span></div></div>
         </div>
       </div>
