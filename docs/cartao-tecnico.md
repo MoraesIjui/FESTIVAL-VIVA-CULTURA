@@ -9,10 +9,10 @@
 | Build | Vite |
 | Estilização | Tailwind CSS 4 + CSS personalizado |
 | Bibliotecas de ícones | Lucide React |
-| Hospedagem selecionada | Vercel (publicação pendente) |
-| Repositório GitHub | **PENDENTE** |
-| URL pública | **PENDENTE** |
-| Domínio/DNS | **PENDENTE** — domínio da Vercel ao publicar, DNS gerenciado pelo provedor |
+| Hospedagem selecionada | GitHub Pages (publicação automatizada por GitHub Actions) |
+| Repositório GitHub | https://github.com/MoraesIjui/FESTIVAL-VIVA-CULTURA |
+| URL pública | https://moraesijui.github.io/FESTIVAL-VIVA-CULTURA/ (confirmar após deploy) |
+| Domínio/DNS | Domínio github.io (GitHub Pages); DNS gerenciado pelo GitHub |
 | HTTPS | **PENDENTE DE VERIFICAÇÃO** — verificar após deploy |
 | Banco de dados | Não utiliza |
 | APIs/serviços com chaves | Não utiliza |
@@ -31,7 +31,7 @@
 
 ## Guia para completar após o deploy
 
-1. Colar link GitHub e URL Vercel.
+1. Conferir o link GitHub e a URL do GitHub Pages após o primeiro deploy.
 2. Conferir nome do domínio, gestão do DNS e HTTPS pelo cadeado/inspeção do certificado.
 3. Registrar em `testes.md` os resultados e capturas reais.
 4. Revisar se todos os textos sobre o evento permanecem identificados como fictícios.
