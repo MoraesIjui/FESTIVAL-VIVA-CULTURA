@@ -16,7 +16,7 @@ export function Hero() {
           <div className="hero-rodape"><span className="mini-estrela" aria-hidden="true">✳</span> ARTE PARA TODOS. ENTRADA GRATUITA.</div>
         </div>
         <div className="hero-arte">
-          <img src="/imagens/hero-festival.svg" alt="" aria-hidden="true" width="650" height="650" />
+          <img src={`${import.meta.env.BASE_URL}imagens/hero-festival.svg`} alt="" aria-hidden="true" width="650" height="650" />
           <div className="hero-arte-etiqueta"><span>VIVA</span><strong>A NOSSA CULTURA</strong><span>2026</span></div>
         </div>
       </div>
