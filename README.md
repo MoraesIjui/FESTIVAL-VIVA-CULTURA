@@ -10,7 +10,7 @@ Portal responsivo **fictício** de evento cultural da comunidade, desenvolvido c
 - Vite 7
 - Tailwind CSS 4 integrado ao Vite (com CSS personalizado para o projeto)
 - Lucide React para ícones
-- Git/GitHub e Vercel para publicação futura
+- GitHub Pages + GitHub Actions para hospedagem e publicação automática
 - Sem backend e sem banco de dados nesta versão
 
 ## Pré-requisitos
@@ -84,15 +84,21 @@ tests/
   estrutura.test.mjs        # Testes automatizados estáticos
 ```
 
-## Publicação no Vercel
+## Publicação no GitHub Pages
 
-1. Criar repositório no GitHub e enviar a pasta do projeto (não enviar `node_modules` nem `.env`).
-2. No Vercel: **Add New > Project > Import Git Repository**.
-3. Framework: **Vite**; Build Command: `npm run build`; Output Directory: `dist`.
-4. Fazer Deploy e abrir o domínio público para verificar HTTPS, links, imagens e comportamento em celular.
-5. Adicionar URL, data da publicação e capturas no cartão técnico e em `docs/testes.md`.
+**Repositório:** https://github.com/MoraesIjui/FESTIVAL-VIVA-CULTURA
 
-**Publicação ainda não realizada** neste pacote. HTTPS e testes públicos só podem ser confirmados após o deploy.
+**Endereço previsto:** https://moraesijui.github.io/FESTIVAL-VIVA-CULTURA/
+
+1. No GitHub, abra o repositório em **Settings > Pages**.
+2. Em **Build and deployment > Source**, escolha **GitHub Actions**.
+3. O workflow `.github/workflows/deploy-pages.yml` executa automaticamente após cada push na branch `main`: instala dependências, executa `npm test`, faz `npm run build` e envia `dist/` para o Pages.
+4. Em **Actions**, confira se `Publicar Festival Viva Cultura (GitHub Pages)` concluiu com sucesso. Se precisar, execute-o manualmente com **Run workflow**.
+5. Visite o endereço previsto e confirme a abertura de imagens, fontes, formulário, links e HTTPS em desktop e celular. Registre resultados reais em `docs/testes.md`.
+
+O `vite.config.ts` define `base: '/FESTIVAL-VIVA-CULTURA/'`; os caminhos de arquivos estáticos utilizam `import.meta.env.BASE_URL` ou `%BASE_URL%`, evitando erros de caminho em projetos GitHub Pages.
+
+**Atenção:** o link só estará acessível após o Pages estar habilitado e o workflow terminar com sucesso. Não há banco de dados nem serviço para guardar mensagens; o formulário é demonstrativo.
 
 ## Privacidade e acessibilidade
 
